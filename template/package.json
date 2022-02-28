@@ -25,8 +25,7 @@
     "clean": "rimraf lib",
     "build": "npm run clean && tsc",<% if (enableTest) { %>
     "test": "jest --coverage",<% } %>
-    "copy": "copyfiles -u 1 \"src/**/*.d.ts\" lib",
-    "prepare": "npm run build && npm run copy<%= enableTest ? ' && npm run test' : '' %>"
+    "copy": "copyfiles -u 1 \"src/**/*.d.ts\" lib"
   },
   <% if (!enableTs && enableTest) { %>
   "standard": {
