@@ -63,6 +63,12 @@ module.exports = {
       ]
     },
     {
+      name: 'github',
+      type: 'text',
+      message: 'GitHub username or organization',
+      initial: 'zce'
+    },
+    {
       name: 'features',
       type: 'multiselect',
       message: 'Choose the features you need',
