@@ -1,6 +1,6 @@
 <% if (license === 'MIT') { %>The MIT License (MIT)
 
-Copyright (c) <%= year %> <%= author %> <<%= email %>> (<%= url %>)
+Copyright (c) <%= year %> <%= author %> <<%= email %>> ()
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.<% } else if (license === 'BSD-3-Clause') { %>
   BSD 3-Clause License
 
-  Copyright (c) <%= year %>, <%= author %> <<%= email %>> (<%= url %>)
+  Copyright (c) <%= year %>, <%= author %> <<%= email %>> ()
   All rights reserved.
 
   Redistribution and use in source and binary forms, with or without
@@ -235,7 +235,7 @@ file or class name and description of purpose be included on the
 same "printed page" as the copyright notice for easier
 identification within third-party archives.
 
-Copyright <%= year %> <%= author %> <<%= email %>> (<%= url %>)
+Copyright <%= year %> <%= author %> <<%= email %>> ()
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

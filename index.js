@@ -46,11 +46,6 @@ module.exports = {
       message: 'Project author email'
     },
     {
-      name: 'url',
-      type: 'text',
-      message: 'Project author url'
-    },
-    {
       name: 'license',
       type: 'select',
       message: 'Project license',
@@ -66,7 +61,7 @@ module.exports = {
       name: 'github',
       type: 'text',
       message: 'GitHub username or organization',
-      initial: 'zce'
+      initial: 'saltires'
     },
     {
       name: 'features',
