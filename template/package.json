@@ -35,7 +35,7 @@
     ]
   },<% } %>
   "dependencies": {<% if (enableCli) { %>
-    "commander": "^6.7.3"
+    "commander": "^8.3.0"
   <% } %>},
   "devDependencies": {<% if (enableTs) { if (enableTest) { %>
     "@types/jest": "27.0.2",<% } %>
