@@ -22,7 +22,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "rimraf lib && tsc",<% } if (enableTest) { %>
+    "build": "rimraf lib && tsc",<% if (enableTest) { %>
     "test": "jest --coverage",<% } %>
     "prepare": "npm run build<%= enableTest ? ' && npm run test' : '' %>"
   },
