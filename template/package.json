@@ -8,7 +8,7 @@
   "description": "<%= description %>",
   "keywords": [
     "<%= name %>",<% if (enableTs) { %>
-    "typescript",<% } if (enableCli) { %>
+    "typescript"<% if (enableCli) { %>,<% } %><% } if (enableCli) { %>
     "cli"<% } %>
   ],
   "repository": "<%= github %>/<%= name %>",
@@ -22,10 +22,10 @@
     "lib"
   ],
   "scripts": {
-    "clean": "rimraf lib",
-    "build": "npm run clean && tsc",<% if (enableTest) { %>
+    "clean": "rimraf lib",<% if (enableTs) { %>
+    "copy": "copyfiles -u 1 \"src/**/*.d.ts\" lib",<% } %>
+    "build": "npm run clean && tsc<% if (enableTs) { %> && yarn copy<% } %>",<% if (enableTest) { %>
     "test": "jest --coverage",<% } %>
-    "copy": "copyfiles -u 1 \"src/**/*.d.ts\" lib"
   },
   <% if (!enableTs && enableTest) { %>
   "standard": {

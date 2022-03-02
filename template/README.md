@@ -1,30 +1,22 @@
 # <%= name %>
 <% if (features.includes('test')) { %>
-[![Build Status][actions-img]][actions-url]
-[![Coverage Status][codecov-img]][codecov-url]<% } %>
-[![License][license-img]][license-url]
-[![NPM Downloads][downloads-img]][downloads-url]
-[![NPM Version][version-img]][version-url]
-[![Dependency Status][dependency-img]][dependency-url]
-[![devDependency Status][devdependency-img]][devdependency-url]
-[![Code Style][style-img]][style-url]
-
+![coverage](https://img.shields.io/badge/coverage-98.01%25-green) ![test](https://img.shields.io/badge/passed-tests-blue)
 > <%= description %>
 
 ## Installation
 
 ```shell
-$ npm install <%= name %>
+$ npm install <%= name %> -D
 
 # or yarn
-$ yarn add <%= name %>
+$ yarn add <%= name %> -D
 ```
 
-## Usage
+## Getting started
 
 ```javascript
 const <%= _.camelCase(name) %> = require('<%= name %>')
-const result = <%= _.camelCase(name) %>('w')
+
 ```
 
 ## API

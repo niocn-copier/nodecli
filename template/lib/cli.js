@@ -1,30 +1,20 @@
-const cac = require('cac')
-const <%= _.camelCase(name) %> = require('.')
-const { name, version } = require('../package.json')
+import { Command } from 'commander';
+import init from '.';
+import { cliName as name, version } from '../package.json';
 
-// Unified error handling
-/* istanbul ignore next */
-const onError = err => {
-  console.error(err.message)
-  process.exit(1)
-}
+const program = new Command();
 
-process.on('uncaughtException', onError)
-process.on('unhandledRejection', onError)
+program
+  .version(version)
+  .description('Compresses a specified directory into a war file')
+  .option('-t, --template <templatepath>', 'Specify the directory address of the deploy template')
+  .option('-s, --src <srcpath>', 'Specifies which folder to package')
+  .option('-o, --output <outpath>', 'Specify output address')
+  .option('-p, --packageversion <packageversion>', 'Specify packageVersion')
+  .option('-m, --miniversion <miniversion>', 'Specify miniVersion');
 
-const cli = cac(name)
+program.parse(process.argv);
 
-// TODO: Implement module cli
+const options = program.opts();
 
-cli
-  .command('<input>', 'Sample cli program')
-  .option('--host <host>', 'Sample options')
-  .example(`  $ <%= '${name}' %> w --host zce.me`)
-  .action((input, { host }) => {
-    if (typeof host !== 'string' && typeof host !== 'undefined') {
-      throw new TypeError(`Expected host is a string, got ${typeof host}`)
-    }
-    console.log(<%= _.camelCase(name) %>(input, { host }))
-  })
-
-cli.help().version(version).parse()
+init(options);
