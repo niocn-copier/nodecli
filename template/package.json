@@ -8,7 +8,7 @@
   "description": "<%= description %>",
   "keywords": [
     "<%= name %>",<% if (enableTs) { %>
-    "typescript"<% if (enableCli) { %>,<% } %><% } if (enableCli) { %>
+    "typescript"<% } if (enableCli) { %>,<% } if (enableCli) { %>
     "cli"<% } %>
   ],
   "repository": "<%= github %>/<%= name %>",
