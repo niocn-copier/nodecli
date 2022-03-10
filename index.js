@@ -110,7 +110,7 @@ module.exports = {
     'tsconfig.json': ({ features }) => features.includes('typescript')
   },
   install: 'npm',
-  init: true,
+  init: false,
   setup: async ctx => {
     ctx.config.install = ctx.answers.install && ctx.answers.pm
   },
